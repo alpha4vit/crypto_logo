@@ -1,0 +1,78 @@
+{
+  "chainConfigs": [
+    {
+      "chainId": 1,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/1",
+      "outputDirectoryName": "10",
+      "logoReplacements": [
+        {
+          "currentChainAddress": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
+          "replacesChainId": "56",
+          "addressTo": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+        }
+      ]
+    },
+    {
+      "chainId": 10,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/10",
+      "outputDirectoryName": "10"
+    },
+    {
+      "chainId": 56,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/56",
+      "outputDirectoryName": "56"
+    },
+    {
+      "chainId": 137,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/137",
+      "outputDirectoryName": "137"
+    },
+    {
+      "chainId": 42161,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/42161",
+      "outputDirectoryName": "42161"
+    },
+    {
+      "chainId": 250,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/250",
+      "outputDirectoryName": "250"
+    },
+    {
+      "chainId": 43114,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/43114",
+      "outputDirectoryName": "43114"
+    },
+    {
+      "chainId": 8453,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/8453",
+      "outputDirectoryName": "8453"
+    },
+    {
+      "chainId": 100,
+      "providerType": "1inch",
+      "providerURL": "https://tokens.1inch.io/v1.2/100",
+      "outputDirectoryName": "100000002",
+      "logoReplacements": [
+        {
+          "currentChainAddress": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
+          "replacesChainId": "56",
+          "addressTo": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+        }
+      ]
+    },
+    {
+      "chainId": 7565164,
+      "providerType": "birdeye",
+      "providerURL": "https://docs.birdeye.so/reference/get_defi-tokenlist",
+      "outputDirectoryName": "7565164"
+    }
+  ]
+}

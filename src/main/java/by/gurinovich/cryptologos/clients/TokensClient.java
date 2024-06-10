@@ -3,7 +3,6 @@ package by.gurinovich.cryptologos.clients;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.net.URI;
 import java.util.Map;
@@ -13,23 +12,21 @@ import java.util.Map;
         url = "${tokens.base-url}")
 public interface TokensClient {
 
-    @GetMapping("/{chainId}")
+    @GetMapping
     @CircuitBreaker(name = "getTokensCircuitBreaker", fallbackMethod = "getTokensFallback")
-    Map<String, Token> getTokens(@PathVariable("chainId") String chainId);
-
-
+    Map<String, Token> getTokens(URI uri);
 
     @GetMapping
     @CircuitBreaker(name = "getTokenLogoCircuitBreaker", fallbackMethod = "getTokenLogoFallback")
     byte[] getTokenLogo(URI uri);
 
-    default Map<String, String> getTokensFallback(Exception exception) {
-        System.out.println("token fallback");
+    default Map<String, String> getTokensFallback(URI uri, Exception exception) {
+        System.out.println("token fallback "+uri);
         return Map.of();
     }
 
-    default byte[] getTokenLogoFallback(Exception exception) {
-        System.out.println("token logo fallback");
+    default byte[] getTokenLogoFallback(URI uri, Exception exception) {
+        System.out.println("token logo fallback " + uri.getPath());
         return new byte[]{};
     }
 }

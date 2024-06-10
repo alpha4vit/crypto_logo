@@ -13,7 +13,6 @@ public class FeignErrorDecoder implements ErrorDecoder {
 
     @Override
     public Exception decode(String methodKey, Response response) {
-        log.warn("lalalalala");
         if (response.status() == 404) {
             log.warn("404 error occurred while calling method: {}", methodKey);
             return new NotFoundException("Resource not found: " + response.request().url());
