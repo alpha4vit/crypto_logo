@@ -24,8 +24,8 @@ public class LogoUpdater {
     private void updateCurrencyLogos() {
         log.info("Logo update started");
         var chainConfigs = jsonParser.convertFromJson("chainConfig.json");
-        chainConfigs.forEach(config -> {
-            log.warn(config.providerURL());
+        chainConfigs.parallelStream().forEach(config -> {
+            log.info(config.providerURL());
             var response = tokensClient.getTokens(URI.create(config.providerURL()));
             response.forEach((key, token) -> {
                 var logo = tokensClient.getTokenLogo(URI.create(token.logoURI()));

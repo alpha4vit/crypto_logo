@@ -1,6 +1,12 @@
 {
   "chainConfigs": [
     {
+      "chainId": 7565164,
+      "providerType": "birdeye",
+      "providerURL": "https://docs.birdeye.so/reference/get_defi-tokenlist",
+      "outputDirectoryName": "7565164"
+    },
+    {
       "chainId": 1,
       "providerType": "1inch",
       "providerURL": "https://tokens.1inch.io/v1.2/1",
@@ -67,12 +73,6 @@
           "addressTo": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
         }
       ]
-    },
-    {
-      "chainId": 7565164,
-      "providerType": "birdeye",
-      "providerURL": "https://docs.birdeye.so/reference/get_defi-tokenlist",
-      "outputDirectoryName": "7565164"
     }
   ]
 }
